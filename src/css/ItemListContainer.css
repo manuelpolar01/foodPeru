@@ -1,0 +1,8 @@
+.main-content {
+  margin-top: 90px; /* espacio por navbar fijo */
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+  min-height: calc(10vh - 90px);
+  text-align: center;
+}

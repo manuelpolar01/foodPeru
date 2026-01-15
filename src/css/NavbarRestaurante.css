@@ -1,0 +1,57 @@
+/* Navbar principal */
+.navbar-peruano {
+  background: linear-gradient(90deg, #6b0f1a, #9c1c2c);
+  padding: 0.8rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+.brand-peruano {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #f5e6c8 !important;
+  letter-spacing: 1px;
+}
+
+/* Links */
+.navbar-peruano .nav-link {
+  color: #f5e6c8 !important;
+  margin: 0 0.6rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-peruano .nav-link:hover {
+  color: #ffd369 !important;
+}
+
+/* Botón reserva */
+.btn-reserva {
+  background-color: #ffd369;
+  color: #6b0f1a;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.3rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-reserva:hover {
+  background-color: #f5e6c8;
+  color: #6b0f1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile: menú centrado */
+@media (max-width: 768px) {
+  .navbar-peruano .nav-link {
+    margin: 0.8rem 0;
+    text-align: center;
+  }
+
+  .btn-reserva {
+    width: 100%;
+  }
+}
