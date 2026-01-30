@@ -54,6 +54,7 @@ const styles = {
   container: {
     display: "flex",
     flexDirection: "column",
+    alignItems:"center",
     gap: "10px",
     width: "220px",
     fontFamily: "Arial, sans-serif",

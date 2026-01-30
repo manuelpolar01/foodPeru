@@ -6,7 +6,8 @@ function ControlledCarousel() {
   const [index, setIndex] = useState(0);
 
   return (
-    <Carousel activeIndex={index} onSelect={setIndex}>
+    
+    <Carousel style={{marginTop:'120px'}} activeIndex={index} onSelect={setIndex}>
       <Carousel.Item>
         <img className="d-block w-100" src="https://images.pexels.com/photos/35566540/pexels-photo-35566540.jpeg" />
       </Carousel.Item>

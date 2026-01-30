@@ -1,148 +1,154 @@
-import { useEffect, useState } from "react";
 
 const productosPeruanos = [
   {
-    id: 1,
+    id:'1',
     name: "Ceviche",
-    description: "Fresh fish marinated in lime juice with onions and chili",
+    description: "Pesce fresco marinato nel succo di lime con cipolla e peperoncino",
     price: 25,
-    category: "Seafood",
+    category: "Frutti di mare",
     img: "https://images.pexels.com/photos/1292984/pexels-photo-1292984.jpeg"
   },
   {
-    id: 2,
-    name: "Seafood Rice",
-    description: "Rice with mixed seafood and Peruvian spices",
+    id:'2',
+    name: "Riso ai frutti di mare",
+    description: "Riso con frutti di mare misti e spezie peruviane",
     price: 30,
-    category: "Seafood",
+    category: "Frutti di mare",
     img: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
   },
   {
-    id: 3,
-    name: "Grilled Fish",
-    description: "Seasoned grilled fish fillet",
+    id:'3',
+    name: "Pesce alla griglia",
+    description: "Filetto di pesce alla griglia condito",
     price: 29,
-    category: "Seafood",
+    category: "Frutti di mare",
     img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
   },
 
   {
-    id: 4,
+    id:'4',
     name: "Lomo Saltado",
-    description: "Stir-fried beef with vegetables and fries",
+    description: "Manzo saltato in padella con verdure e patatine fritte",
     price: 32,
-    category: "Creole",
+    category: "Cucina creola",
     img: "https://images.pexels.com/photos/209540/pexels-photo-209540.jpeg"
   },
   {
-    id: 5,
+    id:'5',
     name: "Aji de Gallina",
-    description: "Creamy spicy chicken with rice",
+    description: "Pollo cremoso e piccante servito con riso",
     price: 22,
-    category: "Creole",
-    img: "https://images.pexels.com/photos/4061528/pexels-photo-4061528.jpeg"
+    category: "Cucina creola",
+    img: "https://images.pexels.com/photos/14205797/pexels-photo-14205797.png"
   },
   {
-    id: 6,
-    name: "Peruvian Chicken Rice",
-    description: "Green seasoned rice with chicken",
+    id:'6',
+    name: "Riso con pollo peruviano",
+    description: "Riso verde speziato con pollo",
     price: 24,
-    category: "Creole",
-    img: "https://images.pexels.com/photos/4109990/pexels-photo-4109990.jpeg"
+    category: "Cucina creola",
+    img: "https://images.pexels.com/photos/28503590/pexels-photo-28503590.jpeg"
   },
   {
-    id: 7,
+    id:'7',
     name: "Tacu Tacu",
-    description: "Fried rice and beans mix",
+    description: "Miscela fritta di riso e fagioli",
     price: 23,
-    category: "Creole",
+    category: "Cucina creola",
     img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
   },
 
   {
-    id: 8,
+    id:'8',
     name: "Anticuchos",
-    description: "Grilled beef heart skewers",
+    description: "Spiedini di cuore di manzo alla griglia",
     price: 18,
-    category: "Grilled",
+    category: "Alla griglia",
     img: "https://images.pexels.com/photos/262959/pexels-photo-262959.jpeg"
   },
   {
-    id: 9,
-    name: "Peruvian Sausage",
-    description: "Traditional grilled sausage",
+    id:'9',
+    name: "Salsiccia peruviana",
+    description: "Salsiccia tradizionale alla griglia",
     price: 17,
-    category: "Grilled",
+    category: "Alla griglia",
     img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
   },
   {
-    id: 10,
+    id:'10',
     name: "Pachamanca",
-    description: "Traditional Andean meat and vegetables dish",
+    description: "Piatto tradizionale andino di carne e verdure",
     price: 35,
-    category: "Grilled",
+    category: "Alla griglia",
     img: "https://images.pexels.com/photos/1292984/pexels-photo-1292984.jpeg"
   },
 
   {
-    id: 11,
+    id:'11',
     name: "Causa Limeña",
-    description: "Mashed yellow potato layered with chicken",
+    description: "Purè di patate gialle a strati con pollo",
     price: 20,
-    category: "Starters",
+    category: "Antipasti",
     img: "https://images.pexels.com/photos/30766469/pexels-photo-30766469.jpeg"
   },
   {
-    id: 12,
-    name: "Papa a la Huancaina",
-    description: "Potatoes with spicy cheese sauce",
+    id:'12',
+    name: "Papa alla Huancaina",
+    description: "Patate con salsa piccante al formaggio",
     price: 18,
-    category: "Starters",
-    img: "https://images.pexels.com/photos/1292984/pexels-photo-1292984.jpeg"
+    category: "Antipasti",
+    img:  "https://images.pexels.com/photos/28448378/pexels-photo-28448378.jpeg"
   },
   {
-    id: 13,
-    name: "Cheese Sticks",
-    description: "Fried cheese appetizer",
+    id:'13',
+    name: "Bastoncini di formaggio",
+    description: "Antipasto di formaggio fritto",
     price: 15,
-    category: "Starters",
+    category: "Antipasti",
     img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
   },
 
   {
-    id: 14,
+    id:'14',
     name: "Chicha Morada",
-    description: "Purple corn drink with spices",
+    description: "Bevanda di mais viola con spezie",
     price: 8,
-    category: "Beverages",
-    img: "https://images.pexels.com/photos/1292984/pexels-photo-1292984.jpeg"
+    category: "Bevande",
+    img: "https://images.pexels.com/photos/17806617/pexels-photo-17806617.jpeg"
   },
   {
-    id: 15,
+    id:'15',
     name: "Inca Kola",
-    description: "Traditional Peruvian soft drink",
+    description: "Bevanda analcolica tradizionale peruviana",
     price: 7,
-    category: "Beverages",
-    img: "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
+    category: "Bevande",
+    img: "https://images.pexels.com/photos/1990025/pexels-photo-1990025.jpeg"
   }
 ];
 
-
 // se crea una const para exportar SOLO LA PROMESA de este mock
 
-export const getProducts=()=>{
+export const getProducts = () => {
+  let mock = true
 
-  let mock= true
-
-    return new Promise((resolve, reject) => {
-       setTimeout(()=>{
-         if(mock){
-            resolve(productosPeruanos)
-        }
-        else{
-            reject('algo salio mal')
-        }
-       },2000)
-    })
-   
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (mock) {
+        resolve(productosPeruanos)
+      } else {
+        reject('qualcosa è andato storto')
+      }
+    }, 2000)
+  })
 }
+
+export const getItem =(id)=>{
+  return new Promise((resolve) => {
+    setTimeout(() => {
+   
+      let product =productosPeruanos.find((cada)=>cada.id===id)
+      resolve(product)
+    }, 2000);
+  })
+  }
+    

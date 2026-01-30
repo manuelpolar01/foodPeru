@@ -1,3 +1,7 @@
+
+body{
+  padding-top: 60px;
+}
 /* Navbar principal */
 .navbar-peruano {
   background: linear-gradient(90deg, #6b0f1a, #9c1c2c);

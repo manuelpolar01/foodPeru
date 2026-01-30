@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import '../css/NavbarRestaurante.css';
 import CartWidget from './CartWidget';
+import { NavLink } from 'react-router-dom';
 
 function NavbarRestaurante() {
   return (
@@ -20,9 +21,9 @@ function NavbarRestaurante() {
         {/* Menu collassabile */}
         <Navbar.Collapse id="navbar-peruano">
           <Nav className="ms-auto align-items-center">
-            <Nav.Link href="#inizio">Home</Nav.Link>
-            <Nav.Link href="#chi-siamo">Chi siamo</Nav.Link>
-            <Nav.Link href="#menu">Menù</Nav.Link>
+            <Nav.Link as={NavLink} to='/'>Home</Nav.Link>
+            <Nav.Link as={NavLink} to='chi-siamo'>Chi siamo</Nav.Link>
+            <Nav.Link as={NavLink} to='/menu'>Menù</Nav.Link>
             <Nav.Link href="#contatti">Contatti</Nav.Link>
 
             {/* Pulsante prenotazione */}

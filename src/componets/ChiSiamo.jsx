@@ -1,10 +1,14 @@
 import Container from 'react-bootstrap/Container';
 import '../css/ChiSiamo.css';
 
+
 function ChiSiamo() {
+ 
+
   return (
-    <section id="chi-siamo" className="chi-siamo-section">
-      <Container>
+
+    <section  id="chi-siamo" className="chi-siamo-section">
+      <Container> 
         <h2 className="chi-siamo-title">Chi Siamo</h2>
 
         <p className="chi-siamo-text">
