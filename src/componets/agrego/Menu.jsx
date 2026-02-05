@@ -1,9 +1,24 @@
 import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap'
+import FoodSpinner from '../FoodSpinner'
+import { useEffect, useState } from 'react'
+
 
 const Menu = () => {
+  const[loading,setlaoding]= useState(true)
+
+  useEffect(()=>{
+    setTimeout(() => {
+      setlaoding(false)
+    }, 1500);
+  },[])
+
+  if(loading){
+   return <FoodSpinner/>
+  }
+
   return (
-    
+  
     <div   style={{
      display:'flex',
       flexDirection:'column',

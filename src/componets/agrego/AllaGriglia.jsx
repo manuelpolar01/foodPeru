@@ -6,7 +6,7 @@ const AllaGriglia = ({item}) => {
 const{name,description,img,price,id}=item
   return (
     <div>
-        <Card style={{ width: '18rem'}}>
+        <Card  style={{ width: '18rem'}}>
       <Card.Img variant="top"  src={img} alt={name} />
       <Card.Body style={{textAlign:'center'}}>
         <Card.Title>{name}</Card.Title>

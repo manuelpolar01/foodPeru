@@ -33,7 +33,9 @@ function NavbarRestaurante() {
           </Nav>
         </Navbar.Collapse>
       </Container>
-      <CartWidget />
+      <NavLink to='/cart'>
+        <CartWidget/>
+        </NavLink>
     </Navbar>
   );
 }

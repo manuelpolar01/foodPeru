@@ -1,12 +1,22 @@
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import ItemCount from './ItemCount'
+import { useContext, useState } from 'react'
+import { CartContext } from '../assets/context/CartContext'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({ item }) => {
-  if (!item) {
-    console.log(`no hay nada en el getItem ${item}`)
-    return <p>cargando los productos...</p>
+  const[purchase,setPurchase]=useState(false)
+  const{cart,addToCart}=useContext(CartContext)
+console.log('esto viene de iemcount',cart)
+
+
+
+  const onAdd =(cantidad)=>{
+ addToCart(item,cantidad )
+ setPurchase(true)
   }
+
 
   const { name, img, description, price } = item
 
@@ -17,7 +27,12 @@ const ItemDetail = ({ item }) => {
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <p>{price}€</p>
-        <ItemCount stock={item.stock}/>
+        {purchase?
+        <div style={{display:'flex',justifyContent:'space-between',width:'80%',alignItems:'center'}}>
+          <Link className='btn btn-dark' to ='/cart'> vai al carrelo</Link>
+          <Link className='btn btn-dark'to ='/menu'> aggiungo altro</Link>
+
+        </div>:<ItemCount stock={item.stock} onAdd={onAdd}/>}
       </Card.Body>
     </Card>
   )

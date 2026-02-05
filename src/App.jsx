@@ -15,6 +15,11 @@ import AntipastoConteiner from './componets/agrego/AntipastoConteiner';
 import ListaAllagriglia from './componets/agrego/ListaAllagriglia';
 import BevandaContainer from './componets/agrego/BevandaContainer';
 import Home from './componets/Home';
+import { CartProvider } from './assets/context/CartContext';
+import Cart from './componets/Cart';
+import CheckoutHookForm from './componets/CheckoutHookForm';
+
+
 
 
 
@@ -22,12 +27,14 @@ import Home from './componets/Home';
 
 function App() {
 
- return (
-  <BrowserRouter>
+  return (
+    
+   <BrowserRouter>
+    <CartProvider>
     
     <NavbarRestaurante/>
    
-
+<ItemListContainer/>
     <Routes>
      <Route  path='/' element={<Home/>}/>
      <Route  path='chi-siamo' element={<ChiSiamo/>}/>
@@ -54,11 +61,13 @@ function App() {
        <Route path='/menu/bevande' element={<BevandaContainer/>}/>
        <Route path='/menu/bevande/:id' element={<ItemDetailConteiner/>}/>
 
-  
+      <Route path='/cart' element = {<Cart/>}/>
+      <Route path='/checkout' element={<CheckoutHookForm/>}/> 
    </Routes>
 
    <FooterPeru/>
    
+   </CartProvider>
     </BrowserRouter>
  )
 

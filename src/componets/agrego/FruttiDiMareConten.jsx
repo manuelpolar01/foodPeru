@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getProducts } from '../../mock/asyncMock'
 import ItemListFruttiM from './ItemListFruttiM.jsx'
+import FoodSpinner from '../FoodSpinner.jsx'
 
 
 
@@ -30,7 +31,7 @@ const FruttiDiMareConten = () => {
   }, [])
 
   if (error) return <p>No hay datos en frutti di mare</p>
-  if (loading) return <p>Cargando Frutti di Mare...</p>
+  if (loading) return <p><FoodSpinner/></p>
   return (
     <div>
     

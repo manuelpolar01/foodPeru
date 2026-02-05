@@ -10,6 +10,9 @@ const ItemCount = ({ initial = 1, stock = 10, onAdd }) => {
   const decrement = () => {
     if (count > 1) setCount(count - 1);
   };
+// la funcion comprar -agregar al carrito la hice una funcion anonima que si queres la haces asi:
+// const comprar =()=>{ onAdd (count)} y despues la pasas con un onclick(comprar)
+ 
 
   return (
     <div style={styles.container}>
