@@ -11,8 +11,12 @@ const ListaAllagriglia = () => {
         return <p>error</p>
     }
   return (
+    <div style={{padding:'1rem'}}>
+      <h2>piatti  alla griglia</h2>
     <div className='item-list'>
       {data.map(item=><AllaGriglia key={item.id} item={item}/>)}
+    </div>
+
     </div>
   )
 }

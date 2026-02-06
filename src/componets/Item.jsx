@@ -1,28 +1,16 @@
+import { Link } from "react-router-dom";
 
-import Card from 'react-bootstrap/Card'
-import { Link } from 'react-router-dom'
-
- 
-
-
-
-const Item = ({ card }) => {
-  const { name, price, description, img ,id} = card
-  if(!card){
-    return <p>esta caragdo el props</p>
-  }
-
+const Item = ({ id, name, price, img }) => {
   return (
-    <Card style={{ width: '18rem'}}>
-      <Card.Img variant="top"  src={img} alt={name} />
-      <Card.Body style={{textAlign:'center'}}>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>{description}</Card.Text>
-        <p>{price}€</p>
-        <Link className=' btn btn-primary' to={`/item/${id}`}>ver mas</Link>
-      </Card.Body>
-    </Card>
-  )
-}
+    <div className="card">
+      <img src={img} alt={name} />
+      <h3>{name}</h3>
+      <p>${price}</p>
+      <Link to={`/item/${id}`} className="btn btn-dark">
+        Ver detalle
+      </Link>
+    </div>
+  );
+};
 
-export default Item
+export default Item;

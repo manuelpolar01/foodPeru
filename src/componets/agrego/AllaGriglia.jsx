@@ -12,7 +12,7 @@ const{name,description,img,price,id}=item
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <p>{price}€</p>
-        <Link className=' btn btn-primary' to={`/menu/allagrigia/${id}`}>ver mas</Link>
+        <Link className=' btn btn-primary' to={`/menu/allagrigia/${id}`}>quantita</Link>
       </Card.Body>
     </Card>
     </div>

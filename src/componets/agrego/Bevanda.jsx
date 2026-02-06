@@ -10,13 +10,13 @@ const Bevanda = ({item}) => {
 console.log(item)
   return (
     <div>
-         <Card style={{ width: '18rem'}}>
-        <Card.Img variant="top"  src={img} alt={name} />
+         <Card style={{ width: '20rem'}}>
+        <Card.Img style={{height:'20rem',width:'20rem'}}variant="top"  src={img} alt={name} />
         <Card.Body style={{textAlign:'center'}}>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <p>{price}€</p>
-       <Link className=' btn btn-primary' to={`/menu/bevande/${id}`}>aggiungere al carrello</Link>
+       <Link className=' btn btn-primary' to={`/menu/bevande/${id}`}>quantita</Link>
       </Card.Body>
     </Card>
     

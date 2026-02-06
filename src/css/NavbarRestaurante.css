@@ -1,6 +1,6 @@
 
 body{
-  padding-top: 60px;
+  padding-top: 80px;
 }
 /* Navbar principal */
 .navbar-peruano {
@@ -32,6 +32,7 @@ body{
 
 /* Botón reserva */
 .btn-reserva {
+  text-decoration: none;
   background-color: #ffd369;
   color: #6b0f1a;
   border: none;

@@ -14,8 +14,13 @@ const ListCriolla = () => {
     }
 
   return (
+    <div style={{padding:'1rem'}}>
+      <h2> piatti criollo</h2>
     <div className="item-list">
       {data.map(item=>(<Criolla key={item.id} item={item}/>))}
+    </div>
+
+
     </div>
   )
 }

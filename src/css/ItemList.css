@@ -1,16 +1,22 @@
 .item-list {
+
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  padding: 1rem;
-  
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en PC */
+  gap: 1.5rem;
+  padding:2rem;
 }
 
-
+/* Tablet */
+@media (max-width: 1024px) {
+  .item-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  }
+}
 
 /* Mobile */
 @media (max-width: 768px) {
   .item-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 columna */
   }
 }

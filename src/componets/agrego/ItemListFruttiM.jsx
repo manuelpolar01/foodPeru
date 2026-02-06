@@ -4,13 +4,14 @@ import ItemSoloMare from './itemSoloMare'
 
 
 
+
 const ItemListFruttiM = ({data}) => {
 
 
   return (
-    <div>
+    <div >
       <h2>piatti con frutti di mare</h2>
-    <div className="item-list">   
+    <div  className='item-list'>   
      {data.map(item=>(
       <ItemSoloMare key={item.id} item={item}/>
      ))}

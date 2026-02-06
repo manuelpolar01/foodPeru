@@ -31,7 +31,7 @@ const FruttiDiMareConten = () => {
   }, [])
 
   if (error) return <p>No hay datos en frutti di mare</p>
-  if (loading) return <p><FoodSpinner/></p>
+  if (loading) return <div> <FoodSpinner/></div>
   return (
     <div>
     

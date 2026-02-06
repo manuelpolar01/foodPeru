@@ -1,58 +1,30 @@
-import React, { useEffect, useState } from 'react'
-import { getProducts } from './mock/asyncMock'
-import ItemList from './componets/ItemList'
-import FoodSpinner from './componets/FoodSpinner'
-import { collection, getDocs, query, where } from 'firebase/firestore'
-import { db } from './service/firebase'
-import { useParams } from 'react-router-dom'
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import ItemList from "./ItemList";
+import LoaderComponet from "./LoaderComponet";
+import { getProducts } from "../mock/AsyncMock";
 
-const ItemListContainer = ({greeting}) => {
-const[product,setProduct]=useState([])
-const [loading, setLoading] = useState(true)
-const{categoryId} =useParams()
+const ItemListContainer = ({ greeting }) => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const { categoryId } = useParams();
 
-
-//FIREBASE
-
-useEffect(()=>{
-
-//conectamos con nuestra collection    
-const productsCollection = categoryId ? query(collection(db,"productos"),where("category","==",categoryId)):collection(db,"productos")
-//perdir los documentos
-getDocs(productsCollection)
-.then((res)=>{
-    //limpiar los datos para utilizar
-    const list = res.docs.map((doc)=>{ 
-        return{ id:doc.id,
-                 ...doc.data()
-        }
-    })
-    console.log(list)
-    setProduct(list)
-})
-.catch((error)=>console.log(error))
-.finally(()=>setLoading(false))
-},[categoryId])
- 
-
-
-//useEffect(() => {
-// getProducts()
-//   .then((res) => setProduct(res))
-//   .catch((error) => console.log(error))
-//   .finally(() => setLoading(false))
-//}, [])
+  useEffect(() => {
   
+    getProducts(categoryId)
+      .then((res) => setProducts(res))
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
+  }, [categoryId]);
 
-return (
-  <div style={{ marginTop: '120px' }}>
-  <h2 style={{textAlign:'center'}}>{greeting}</h2>
-  {loading ? <FoodSpinner /> : <ItemList product={product} />}
-</div>
+  return (
+    <div style={{ marginTop: "120px" }}>
+      <h2 style={{ textAlign: "center" }}>
+        {greeting} {categoryId && <span>{categoryId}</span>}
+      </h2>
+      {loading ? <LoaderComponet /> : <ItemList products={products} />}
+    </div>
+  );
+};
 
-)
-
-}
-
-export default ItemListContainer
- 	
+export default ItemListContainer;

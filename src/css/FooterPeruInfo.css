@@ -1,0 +1,56 @@
+.footer-aviso {
+  background-color: #b02a37;
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.footer-peru {
+  background-color: #1a1a1a;
+  color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-peru .footer-link {
+  color: #f8f9fa;
+  text-decoration: none;
+}
+
+.footer-peru .footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-peru .footer-brand {
+  color: #ffd814;
+  text-decoration: none;
+}
+
+.footer-peru .footer-horario {
+  color: #ffd814;
+  margin-top: 0.5rem;
+}
+
+.footer-peru .footer-icon {
+  color: #f8f9fa;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.footer-peru .footer-icon:hover {
+  color: #ffd814;
+}
+
+.whatsapp-icon {
+  color: #25D366;
+}
+
+@media (max-width: 768px) {
+  .footer-peru .row > div {
+    text-align: center;
+  }
+  .footer-horario {
+    display: block;
+  }
+}

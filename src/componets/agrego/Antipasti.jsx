@@ -7,12 +7,12 @@ const Antipasti = ({item}) => {
 
   return (
       <Card style={{ width: '18rem'}}>
-        <Card.Img variant="top"  src={img} alt={name} />
+        <Card.Img  style={{height:'18rem',width:'18rem'}} variant="top"  src={img} alt={name} />
         <Card.Body style={{textAlign:'center'}}>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <p>{price}€</p>
-      <Link className=' btn btn-primary'to ={`/menu/antipasto/${id}`} >aggiungere al carrello</Link>
+      <Link className=' btn btn-primary'to ={`/menu/antipasto/${id}`} >quantita</Link>
       </Card.Body>
     </Card>
   )
