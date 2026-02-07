@@ -6,11 +6,14 @@ const CartWidget = () => {
   const context = useContext(CartContext);
 
   return (
-    <div className="cart-widget">
-      <span><GiMeal fontSize={'1.8rem'} /></span>
-      <span>{context?.cartQuantity ? context.cartQuantity() : 0}</span>
-    </div>
-  );
+ <div className="cart-widget">
+  <span><GiMeal fontSize="1.8rem" /></span>
+
+  {context?.cartQuantity() > 0 && (
+    <span>{context.cartQuantity()}</span>
+  )}
+</div>
+  )
 };
 
 export default CartWidget;
