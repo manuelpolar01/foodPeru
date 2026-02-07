@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemSoloMare from './itemSoloMare'
+import ItemSoloMare from "./ItemSoloMare.jsx";
 
 
 

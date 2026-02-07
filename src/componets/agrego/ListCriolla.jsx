@@ -1,6 +1,6 @@
 import React from 'react'
 import useCucinaCreola from './useCucinaCreola'
-import Criolla from './criolla'
+import Criolla from "./Criolla.jsx"
 import FoodSpinner from '../FoodSpinner'
 
 

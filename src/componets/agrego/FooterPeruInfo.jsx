@@ -1,4 +1,4 @@
-import "../../css/FooterPeruInfo.css";
+import "../../css/FooterPeruInfo.css"; 
 
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 

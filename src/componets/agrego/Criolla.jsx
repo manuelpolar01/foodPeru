@@ -10,8 +10,8 @@ const {name, img,description,price,id} = item
 console.log(item)
   return (
     <div>
-         <Card style={{ width:'18px'}}>
-        <Card.Img  style={{objectFit:'cover'}}variant="top"  src={img} alt={name} />
+         <Card style={{ width:'18rem'}}>
+        <Card.Img style={{width:'18rem',height:'18rem'}} variant="top"  src={img} alt={name} />
         <Card.Body style={{textAlign:'center'}}>
         <Card.Title>{name}</Card.Title>
         <Card.Text>{description}</Card.Text>
